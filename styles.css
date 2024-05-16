@@ -13,22 +13,20 @@ body {
     display: flex;
     align-items: center;
     background-color:ghostwhite;
+    width: 100vw;
+    height: 100vh;
+    min-height: 700px;
 }
 
 .imageContainer {
-    height: 100vh;
     min-width: var(--leftPageWidth);
     background-image: url('./imgs/image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.fitImage {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    position: relative;
+    height:100vh;
+    min-height: 100%;
 }
 
 .sidebar {
@@ -59,7 +57,8 @@ body {
 
 .rightContainer {
     display: flex;
-    width: calc(100wh - var(--leftPageWidth));
+    width: calc(100vw - var(--leftPageWidth));
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -72,16 +71,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 10px;
 }
 
 .textContainer>p:nth-child(2) {
-    line-height: 5;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 
 .formContainer {
     width: 60vw;
-    height: 35vh;
+    height: 400px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -89,14 +90,6 @@ body {
     padding-top: 20px;
     padding-bottom: 40px;
     gap: 10px;
-}
-
-.submitContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 15px;
 }
 
 .inputContainer {
@@ -138,6 +131,14 @@ input:invalid {
     text-align: center;
 }
 
+.submitContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 button {
     border-radius: 10px;
     border: none;
@@ -148,7 +149,8 @@ button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 16px;
-    cursor: pointer;   
+    cursor: pointer;  
+    margin-top: 10px; 
 }
 
 button:hover {
@@ -160,4 +162,18 @@ button:active {
     background-color: #b667c3;
 }
 
-
+@media screen and (max-width:850px) {
+    body {
+        flex-direction: column;
+    }
+    .imageContainer {
+        width: 100vw;
+        height: 20rem;
+    }
+    .sidebar {
+        width: 100vw;
+    }
+    .formContainer {
+        width: 100vw;
+    }
+}
