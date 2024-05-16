@@ -5,33 +5,30 @@
 
 @font-face {
     font-family: 'Norse';
-    src: url(./Norse-Bold.otf);
+    src: url("./fonts/Norse-Bold.otf");
 }
 
 body {
     margin:0;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    background-color:ghostwhite;
 }
 
 .imageContainer {
+    height: 100vh;
     min-width: var(--leftPageWidth);
-    height:100vh;
+    background-image: url('./imgs/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.imageContainer img {
+.fitImage {
     height: 100%;
     width: 100%;
-}
-
-.formContainer {
-    width: 60vw;
-    height: 40vh;
-    background-color: ghostwhite;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    object-fit: cover;
+    object-position: center;
 }
 
 .sidebar {
@@ -47,7 +44,7 @@ body {
 }
 
 .sidebar img {
-    width: 50px; /* Adjust size as needed */
+    width: 75px; /* Adjust size as needed */
     height: auto;
     margin-bottom: 10px;
     padding: 15px;
@@ -60,11 +57,107 @@ body {
     font-family: Norse, sans-serif;
 }
 
-
 .rightContainer {
     display: flex;
+    width: calc(100wh - var(--leftPageWidth));
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10vh;
+    gap: 2vh;
 }
+
+.textContainer {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer>p:nth-child(2) {
+    line-height: 5;
+}
+
+
+.formContainer {
+    width: 60vw;
+    height: 35vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    gap: 10px;
+}
+
+.submitContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    width: 40%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+input{
+    padding: 0.5rem;
+    border-radius: 25px; /* This makes the corners rounded */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border: 2px solid lightblue;
+    box-shadow: 1px 1px 1px 1.5px rgba(0, 0, 0, 0.255);
+    outline: none;
+}
+
+input:invalid {
+    border: 2px solid lightcoral;
+}
+
+.legend {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Norse, sans-serif;
+    height: fit-content;
+    text-align: center;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.255);
+    background-color: aliceblue;
+    color: black;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;   
+}
+
+button:hover {
+    color: white;
+    background-color: #cc8fff;
+}
+
+button:active {
+    background-color: #b667c3;
+}
+
+

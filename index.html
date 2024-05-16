@@ -12,7 +12,6 @@
 -->
 <body>
     <div class="imageContainer">
-        <img src="./imgs/image.png" alt="zoom in photo of pink flowers on tree">
         <div class="sidebar">
             <img src="./imgs/logo.png" alt="graphic logo of flower">
             <p>Blume</p>
@@ -22,9 +21,7 @@
     <div class="rightContainer">
         <div class="textContainer">
             <p>
-                You know you need something like this to help you realise your deepest dreams.
-            </p>
-            <p>
+                You know you need something like this to help you realise your deepest dreams.<br>
                 Sign up <em>now</em> to get started.
             </p>
             <p>
@@ -33,32 +30,38 @@
         </div>
 
         <div class="formContainer">
-            <legend>Sign Up Now</legend>
+            <div class="legend">Sign Up Now</div>
 
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="">
-
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName">
-
-            <label for="email">Email</label>
-            <input type="email" id="email">
-
-            <label for="phoneNumber">Phone Number</label>
-            <input type="number" id="phoneNumber">
-
-            <label for="password">Password</label>
-            <input type="password" id="password">
-
-            <label for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword">
+            <div class="inputContainer">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="">
+            </div>
+            <div class="inputContainer">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName">
+            </div>  
+            <div class="inputContainer">      
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>  
+            <div class="inputContainer">    
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber">
+            </div>  
+            <div class="inputContainer">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>  
+            <div class="inputContainer">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword">
+            </div>  
         </div>
 
-        <div class="buttonContainer">
+        <div class="submitContainer">
             <button>Create Account</button>
-            <div> Already have an account? Log in</div>
+            <div> Already have an account? <a href="">Log in</a></div>
         </div>
     </div>
-    
 </body>
 </html>
