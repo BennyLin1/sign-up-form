@@ -1,0 +1,70 @@
+:root {
+    --leftPageWidth: 40vw;
+    --sidebarColor: rgba(0, 0, 0, 0.7)
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url(./Norse-Bold.otf);
+}
+
+body {
+    margin:0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imageContainer {
+    min-width: var(--leftPageWidth);
+    height:100vh;
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.formContainer {
+    width: 60vw;
+    height: 40vh;
+    background-color: ghostwhite;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: var(--leftPageWidth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--sidebarColor);
+}
+
+.sidebar img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.sidebar p {
+    margin: 0;
+    font-size: 2rem; /* Adjust as needed */
+    color: white /* Text color */;
+    font-family: Norse, sans-serif;
+}
+
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+}
