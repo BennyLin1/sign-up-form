@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css"></link>
+    <script defer src="scripts.js"></script>
 </head>
 
-<!--
-    https://unsplash.com/photos/a-tree-with-purple-flowers-in-front-of-a-building-d9kuG83XFZA
--->
 <body>
     <div class="imageContainer">
         <div class="sidebar">
-            <img src="./imgs/logo.png" alt="graphic logo of flower">
+            <img src="./imgs/logo.png" alt="graphic logo of flower"> 
             <p>Blume</p>
         </div>
+        <div class="credit">Photo from <a href="https://unsplash.com/photos/a-tree-with-purple-flowers-in-front-of-a-building-d9kuG83XFZA">Unplash</a> by Alex Quezada </div>
     </div>
 
     <div class="rightContainer">
         <div class="textContainer">
             <p>
                 You know you need something like this to help you realise your deepest dreams.<br>
+                <br>
                 Sign up <em>now</em> to get started.
             </p>
             <p>
@@ -43,18 +43,22 @@
             <div class="inputContainer">      
                 <label for="email">Email</label>
                 <input type="email" id="email">
+                <div id="emailError" class="error"></div>
             </div>  
             <div class="inputContainer">    
                 <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber">
+                <input type="tel" pattern='[0-9]{10}' id="phoneNumber">
+                <div id="phoneNumberError" class="error"></div>
             </div>  
             <div class="inputContainer">
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password" pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}' id="password">
+                <div id="passwordError" class="error"></div>
             </div>  
             <div class="inputContainer">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword">
+                <input type="password" pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}' id="confirmPassword">
+                <div id="confirmPasswordError" class="error"></div>
             </div>  
         </div>
 

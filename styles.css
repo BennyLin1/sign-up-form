@@ -24,9 +24,17 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     height:100vh;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.credit {
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
 .sidebar {
@@ -71,12 +79,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
+    height: 200px;
+    width: calc(90vw - var(--leftPageWidth));
 }
 
 .textContainer>p:nth-child(2) {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
@@ -137,6 +146,7 @@ input:invalid {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 button {
@@ -160,6 +170,14 @@ button:hover {
 
 button:active {
     background-color: #b667c3;
+}
+
+.error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    color: red;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 @media screen and (max-width:850px) {
