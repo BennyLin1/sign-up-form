@@ -32,19 +32,18 @@ password.addEventListener("input", ()=> {
 
         let errorText = '';
         if (regExpCap.test(currentValue) == false){ // Case for atleast 1 capital
-          //errorText += '';
-          errorText += 'Missing at least 1 capital letter. \n';
+          errorText += 'Missing at least 1 capital letter\n';
         } 
 
         if (regExpDig.test(currentValue) == false){ // Case for atleast 1 digit
-            errorText += 'Missing at least 1 number. \n';
+            errorText += 'Missing at least 1 number\n';
         } 
 
         if (currentValue.length < 6){ // Case for less than 6 characters
-          errorText += 'Password must be at least 6 characters. \n'
+          errorText += 'Password must be at least 6 characters\n';
         } 
         passwordError.textContent = errorText;
-        
+
       } else {
         passwordError.textContent = '';
       }

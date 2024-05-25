@@ -178,6 +178,7 @@ button:active {
     color: red;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+    white-space: pre-wrap;
 }
 
 @media screen and (max-width:850px) {
